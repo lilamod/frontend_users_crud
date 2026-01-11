@@ -1,0 +1,247 @@
+/* ===== GENERAL RESET & BOX-SIZING ===== */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BODY ===== */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-container, #loginForm {
+  background: #fff;
+  padding: 2rem;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+#loginForm button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #667eea;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#loginForm button:hover {
+  background: #5a67d8;
+}
+
+#message {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* ===== CONTAINER FOR USER TABLE ===== */
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== HEADER (TITLE + LOGOUT + CREATE USER) ===== */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-actions button {
+  padding: 8px 12px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.header-actions button:hover {
+  background-color: #5a67d8;
+}
+
+.logout-icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: #e74c3c;
+  transition: color 0.3s;
+}
+
+.logout-icon:hover {
+  color: #c0392b;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.action-icon {
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.view { color: #3498db; }
+.update { color: #f39c12; }
+.delete { color: #e74c3c; }
+
+/* ===== DIALOGS ===== */
+dialog {
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.form-content label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-content input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-content input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* ===== FORM BUTTONS ===== */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.form-actions button {
+  padding: 0.7rem 1rem;
+  background-color: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.form-actions button:hover {
+  background-color: #5a67d8;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  dialog {
+    width: 90%;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #loginForm {
+    width: 90%;
+  }
+}
+
+/* ===== SEARCH INPUT ===== */
+#searchInput {
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  width: 200px;
+  transition: border 0.3s;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #667eea;
+}
